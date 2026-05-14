@@ -1,0 +1,57 @@
+# Build directory
+/build/
+
+# Object files
+*.o
+*.obj
+
+# Executables
+*.out
+*.exe
+*.elf
+*.bin
+*.app
+
+# Static and dynamic libraries
+*.a
+*.so
+*.so.*
+*.dll
+*.dylib
+
+# CMake / Make artifacts
+Makefile
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Video files (optional – uncomment if you don’t want them tracked)
+# *.mp4
+# *.avi
+
+# Config overrides (keep template configs tracked if needed)
+# config/*.cfg
+
+# Binary outputs in root (if any)
+client
+server
