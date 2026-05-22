@@ -1,4 +1,3 @@
-// worker.c – gestionare procese worker în paralel (fork + pipe) 
 #include "worker.h"//Include fisierul header ce contine declaratiile necesare
                        //Acesta furnizeaza prototipul functiei si dependentele asociate
 #include "frame_splitter.h"//Include modulul pentru impartirea video-ului in chunk-uri

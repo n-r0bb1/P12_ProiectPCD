@@ -4,6 +4,10 @@
 #include <opencv2/imgproc/imgproc_c.h>
 #include <opencv2/videoio/videoio_c.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 long motion_detect_chunk(const char *video_path, long start_frame,long end_frame,int threshold) // Detecteaza numarul de frame-uri fara, miscare din chunk-ul dat
 {
   IplImage *prev_gray = NULL; // Frame-ul anterior convertit la grayscale
@@ -77,5 +81,8 @@ long motion_detect_chunk(const char *video_path, long start_frame,long end_frame
   cvReleaseCapture(&cap); // Eliberare handle captura video
 
   return no_motion_count; // Returneaza numarul total de frame-uri fara miscaredin chunk
-        
 }
+
+#ifdef __cplusplus
+} /* extern "C" */
+#endif

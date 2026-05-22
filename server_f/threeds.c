@@ -38,7 +38,7 @@ int config_load(const char *path, ServerConfig *out)
 
     int val = 0; //Variabila temporara folosita pentru citirea valorilor din config
 
-    // --- max_workers --- 
+    //  max_workers  
     // Citește server.max_workers sau folosește default 
     if (config_lookup_int(&cfg, "server.max_workers", &val) == CONFIG_TRUE
             && val > 0) { //Verificam daca valoarea exista si este valida (>0)
@@ -47,7 +47,7 @@ int config_load(const char *path, ServerConfig *out)
         out->max_workers = DEFAULT_MAX_WORKERS; //Fallback la valoare implicita
     }
 
-    // --- chunk_size --- 
+    //  chunk_size  
     // Citește server.chunk_size sau fallback 
     if (config_lookup_int(&cfg, "server.chunk_size", &val) == CONFIG_TRUE
             && val > 0) { //Validam existenta si corectitudinea valorii
@@ -56,7 +56,7 @@ int config_load(const char *path, ServerConfig *out)
         out->chunk_size = DEFAULT_CHUNK_SIZE; //Fallback default
     }
 
-    // --- threshold --- 
+    //  threshold  
     // Citește server.threshold sau fallback 
     if (config_lookup_int(&cfg, "server.threshold", &val) == CONFIG_TRUE
             && val >= 0) { //Threshold poate fi 0 sau mai mare

@@ -1,5 +1,3 @@
-// frame_splitter.c – imparte videoul in n chunks 
-
 #include "frame_splitter.h"//Header-ul propriu al modulului frame_splitter
                            //Contine definitiile pentru FrameChunk, constante si prototipul functiei
 

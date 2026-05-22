@@ -60,10 +60,10 @@ int main(int argc, char *argv[]) //Functia principala a programului client
             if (endptr == optarg /* NOLINT */ || *endptr != '\0'
                 || val <= 0 || val > INT_MAX) {
                 //Verificam:
-                // - daca nu s-a facut conversia
-                // - daca exista caractere invalide
-                // - daca valoarea nu este pozitiva
-                // - daca depaseste limita unui int
+                // daca nu s-a facut conversia
+                // daca exista caractere invalide
+                // daca valoarea nu este pozitiva
+                // daca depaseste limita unui int
 
                 (void)fprintf(stderr,
                               "[client] -c must be a positive integer\n"); //Eroare pentru chunk_size invalid
@@ -92,8 +92,7 @@ int main(int argc, char *argv[]) //Functia principala a programului client
                 // - valoare nenegativa
                 // - incadrare in limitele int
 
-                (void)fprintf(stderr,
-                              "[client] -t must be a non-negative integer\n"); //Eroare pentru threshold invalid
+                (void)fprintf(stderr,"[client] -t must be a non-negative integer\n"); //Eroare pentru threshold invalid
                 print_usage(); //Afisam modul corect de utilizare
                 return 1; //Oprire executie
             }

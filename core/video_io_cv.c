@@ -1,8 +1,11 @@
-/* video_io_cv.c – OpenCV VideoCapture query pentru numarul de frame-uri (C API) */
 #include "video_io.h"
 #include <stdio.h>
 
 #include <opencv2/videoio/videoio_c.h> //NOLINT(no-misc-cleaner)
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 long video_get_frame_count_impl(const char *path) //Returneaza numarul total de frame-uri dintr-un video
 {
@@ -30,3 +33,7 @@ long video_get_frame_count_impl(const char *path) //Returneaza numarul total de 
 
     return (long)fc; //Conversie la long si returnare
 }
+
+#ifdef __cplusplus
+} /* extern "C" */
+#endif

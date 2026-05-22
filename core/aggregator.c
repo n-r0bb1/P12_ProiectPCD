@@ -1,4 +1,3 @@
-// aggregator.c – aduna rezultatele partiale de la workers
 #include "aggregator.h" //Include fisierul header ce contine declaratiile necesare
     //Acesta furnizeaza prototipul functiei si dependentele asociate
 
@@ -21,8 +20,7 @@ long aggregator_sum(const long *partials,size_t count) // Functia aduna toate re
   for (size_t i = 0; i < count;++i) // Parcurgem pe rand toate elementele din vectorul partials
             // Indexul i reprezinta pozitia curenta in vector
   {
-    total =
-        total + partials[i]; // Adunam partialele
+    total =total + partials[i]; // Adunam partialele
                              // Fiecare element este adaugat la suma cumulata
   }
   return total; // Se returneaza suma totala

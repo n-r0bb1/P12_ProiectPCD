@@ -1,4 +1,3 @@
-// video_io.c – wrapper pentru obtinerea metadatelor video (OpenCV) 
 #include "video_io.h"//Include header-ul modulului video_io
                      //Acesta contine declaratia functiei si dependintele necesare
 
